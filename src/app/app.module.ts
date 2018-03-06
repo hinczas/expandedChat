@@ -12,16 +12,18 @@ import { AngularFireModule } from 'angularfire2';
 import { MyApp } from './app.component';
 import { AuthProvider } from '../providers/auth/auth';
 import { LoginPage } from '../pages/login/login';
+import { UserProvider } from '../providers/user/user';
+import { LoginPageModule } from '../pages/login/login.module';
 
 @NgModule({
   declarations: [
-    MyApp,
-    LoginPage
+    MyApp
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
-    AngularFireModule.initializeApp(config)
+    AngularFireModule.initializeApp(config),
+    LoginPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +36,8 @@ import { LoginPage } from '../pages/login/login';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     AngularFireAuth,
-    AuthProvider
+    AuthProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
