@@ -14,6 +14,11 @@ import { AuthProvider } from '../providers/auth/auth';
 import { LoginPage } from '../pages/login/login';
 import { UserProvider } from '../providers/user/user';
 import { LoginPageModule } from '../pages/login/login.module';
+import { ImghandlerProvider } from '../providers/imghandler/imghandler';
+
+import { File } from '@ionic-native/file';
+import { FileChooser } from '@ionic-native/file-chooser';
+import { FilePath } from '@ionic-native/file-path';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,11 @@ import { LoginPageModule } from '../pages/login/login.module';
     AuthProvider,
     AngularFireAuth,
     AuthProvider,
-    UserProvider
+    UserProvider,
+    ImghandlerProvider,
+    File,
+    FileChooser,
+    FilePath
   ]
 })
 export class AppModule {}
