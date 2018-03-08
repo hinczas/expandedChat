@@ -10,7 +10,7 @@ import firebase from 'firebase';
 */
 @Injectable()
 export class UserProvider {
-  firedata = firebase.database().ref('/chatusers');
+  firedata = firebase.database().ref('/users');
   constructor(public afireauth: AngularFireAuth) {
   }
 

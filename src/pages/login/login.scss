@@ -1,27 +1,27 @@
 page-login {
-.background {
-    background-image: url('../../assets/imgs/bckg.jpg');
-}
-.scroll-content {
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-ion-card.card {
-    box-shadow: none;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-a, p,
-ion-card-header.card-header {
-    color: #fff!important;
-}
+    .background {
+        background-image: url('../assets/imgs/bckg.jpg');
+    }
+    .scroll-content {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    ion-card.card {
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+    a, p,
+    ion-card-header.card-header {
+        color: #fff!important;
+    }
 
-.list > .item-block:first-child {
-    border: medium none;
-}
+    .list > .item-block:first-child {
+        border: medium none;
+    }
 
 .item {
     margin-bottom: 10px;
