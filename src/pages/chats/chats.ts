@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, AlertController } from 'ionic-angular';
 import { RequestsProvider } from '../../providers/requests/requests';
+import { ChatProvider } from '../../providers/chat/chat';
 
 /**
  * Generated class for the ChatsPage page.
@@ -18,8 +19,8 @@ export class ChatsPage {
   myfriends;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public requestservice: RequestsProvider,
-              public events: Events, public alertCtrl: AlertController) {
-  }
+              public events: Events, public alertCtrl: AlertController, public chatservice: ChatProvider) {
+}
 
 
   ionViewWillEnter() {
@@ -64,6 +65,9 @@ export class ChatsPage {
     })
   }
 
-  
+  buddychat(buddy) {
+    this.chatservice.initializebuddy(buddy);
+    this.navCtrl.push('BuddychatPage');
+  }
 
 }
